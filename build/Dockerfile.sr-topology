@@ -1,0 +1,4 @@
+FROM scratch
+
+COPY ./bin/sr-topology /sr-topology
+ENTRYPOINT ["/sr-topology"]
