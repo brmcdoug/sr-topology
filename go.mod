@@ -12,5 +12,4 @@ require (
 	github.com/klauspost/compress v1.15.9 // indirect
 	github.com/sbezverk/gobmp v1.0.2-0.20220314081931-c192135833e9
 	golang.org/x/net v0.0.0-20220728211354-c7608f3a8462 // indirect
-	//wwwin-github.cisco.com/brmcdoug/sr-vertex v0.0.3-0.20220805212158-e41b12c2de89 // indirect
 )
