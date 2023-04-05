@@ -13,7 +13,7 @@ import (
 	"github.com/jalapeno/topology/pkg/kafkanotifier"
 )
 
-const LSNodeEdgeTopic = "jalapeno.ls_node_edge_events"
+const LinkStateEdgeTopic = "jalapeno.linkstate_edge_events"
 
 var (
 	brockerConnectTimeout = 10 * time.Second
@@ -50,7 +50,7 @@ func NewKafkaNotifier(kafkaSrv string) (*Notifier, error) {
 	}
 	glog.V(5).Infof("Connected to broker: %s id: %d\n", br.Addr(), br.ID())
 
-	if err := ensureTopic(br, topicCreateTimeout, LSNodeEdgeTopic); err != nil {
+	if err := ensureTopic(br, topicCreateTimeout, LinkStateEdgeTopic); err != nil {
 		return &Notifier{}, err
 	}
 	producer, err := sarama.NewSyncProducer([]string{kafkaSrv}, config)

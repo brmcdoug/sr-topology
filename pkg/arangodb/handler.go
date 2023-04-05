@@ -210,7 +210,7 @@ func (a *arangoDB) PeerHandler(obj *notifier.EventMessage) error {
 }
 
 func notifyKafka(doc driver.DocumentMeta, action string) {
-	kafkanotifier.TriggerNotification(Notifier, kafkanotifier.LSNodeEdgeTopic, &notifier.EventMessage{
+	kafkanotifier.TriggerNotification(Notifier, kafkanotifier.LinkStateEdgeTopic, &notifier.EventMessage{
 		Key:    doc.Key,
 		ID:     srTopologyCollection + "/" + doc.Key,
 		Action: action,
